@@ -18,6 +18,7 @@ class CustomTextField extends StatelessWidget {
           hintText: text,
           hintStyle: ThemeManager.textPrimary,
           border: outBorder(),
+          focusColor: ColorManager.primary,
           enabledBorder: outBorder(ColorManager.primary)),
     );
   }
