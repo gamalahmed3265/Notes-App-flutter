@@ -9,8 +9,8 @@ class CustomViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(AppSize.s8),
-      child: Column(
+      padding: const EdgeInsets.symmetric(horizontal: AppSize.s24),
+      child: ListView(
         children: const [CustomAppBar(), CardNote()],
       ),
     );
