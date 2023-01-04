@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/resource/string_manager.dart';
 import 'package:note_app/views/widget/custom_icons.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  final String text;
+  final Icon icon;
+  const CustomAppBar({Key? key, required this.text, required this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
+      children: [
         Text(
-          StringManager.note,
-          style: TextStyle(fontSize: AppSize.s28),
+          text,
+          style: const TextStyle(fontSize: AppSize.s28),
         ),
-        Spacer(),
-        CustomSearchIcon()
+        const Spacer(),
+        CustomIconAppBar(icon: icon)
       ],
     );
   }
