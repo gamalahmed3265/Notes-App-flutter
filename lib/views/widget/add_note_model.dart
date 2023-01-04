@@ -13,15 +13,21 @@ class AddNoteModel extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: AppSize.s32,
+            height: AppSize.s16,
           ),
           CustomTextField(
             text: StringManager.title,
           ),
           const SizedBox(
+            height: AppSize.s16,
+          ),
+          CustomTextField(
+            text: StringManager.description,
+            maxLines: AppSize.s5,
+          ),
+          const SizedBox(
             height: AppSize.s32,
           ),
-          CustomTextField(text: StringManager.description),
         ],
       ),
     );

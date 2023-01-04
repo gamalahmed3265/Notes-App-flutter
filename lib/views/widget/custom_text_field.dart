@@ -5,12 +5,15 @@ import 'package:note_app/views/resource/theme_manager.dart';
 
 class CustomTextField extends StatelessWidget {
   String text;
-  CustomTextField({Key? key, required this.text}) : super(key: key);
+  int maxLines;
+  CustomTextField({Key? key, required this.text, this.maxLines = AppSize.s1})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: ColorManager.primary,
+      maxLines: maxLines,
       decoration: InputDecoration(
           hintText: text,
           hintStyle: ThemeManager.textPrimary,
