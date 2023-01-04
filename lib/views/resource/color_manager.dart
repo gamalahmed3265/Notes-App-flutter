@@ -5,4 +5,5 @@ class ColorManager {
   static const white = Colors.white;
   static Color whitOpacity = white.withOpacity(AppSize.s0_5);
   static Color black = Colors.black;
+  static const Color primary = Color(0xff62FCD7);
 }

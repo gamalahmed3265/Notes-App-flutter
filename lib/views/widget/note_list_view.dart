@@ -12,12 +12,8 @@ class NoteListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         itemBuilder: (context, index) => const SizedBox(height: AppSize.s16),
-        separatorBuilder: (context, index) => InkWell(
-              child: NoteItem(noteDataModel: listNote[index]),
-              onTap: () {
-                print(index);
-              },
-            ),
+        separatorBuilder: (context, index) =>
+            NoteItem(noteDataModel: listNote[index]),
         itemCount: listNote.length);
   }
 }

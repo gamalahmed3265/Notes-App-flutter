@@ -9,6 +9,7 @@ class ThemeManager {
   static TextStyle textOpacity = TextStyle(
       color: ColorManager.black.withOpacity(AppSize.s0_5),
       fontSize: AppSize.s20);
+  static const TextStyle textPrimary = TextStyle(color: ColorManager.primary);
   //
   static ThemeData lightManager = ThemeData(
     brightness: Brightness.light,
