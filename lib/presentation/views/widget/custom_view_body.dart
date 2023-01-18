@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/resource/icons_manager.dart';
-import 'package:note_app/views/resource/string_manager.dart';
-import 'package:note_app/views/widget/custom_app_bar.dart';
-import 'package:note_app/views/widget/note_list_view.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/resource/icons_manager.dart';
+import 'package:note_app/presentation/views/resource/string_manager.dart';
+import 'package:note_app/presentation/views/widget/custom_app_bar.dart';
+import 'package:note_app/presentation/views/widget/note_list_view.dart';
 
 class CustomViewBody extends StatelessWidget {
   const CustomViewBody({Key? key}) : super(key: key);

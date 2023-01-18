@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
 
 import '../resource/color_manager.dart';
 

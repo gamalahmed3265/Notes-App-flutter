@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/widget/custom_icons.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/widget/custom_icons.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String text;

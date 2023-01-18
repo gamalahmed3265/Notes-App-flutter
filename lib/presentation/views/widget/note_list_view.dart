@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/data/local/data_note.dart';
-import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/widget/custom_note_item.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/widget/custom_note_item.dart';
 
 class NoteListView extends StatelessWidget {
   const NoteListView({

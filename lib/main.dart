@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/note_view.dart';
-import 'package:note_app/views/resource/router_manager.dart';
-import 'package:note_app/views/resource/string_manager.dart';
-import 'package:note_app/views/resource/theme_manager.dart';
+import 'package:note_app/presentation/views/resource/router_manager.dart';
+import 'package:note_app/presentation/views/resource/string_manager.dart';
+import 'package:note_app/presentation/views/resource/theme_manager.dart';
 
 void main() {
   runApp(const MyApp());

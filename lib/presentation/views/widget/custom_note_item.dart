@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/domain/model/note_data_model.dart';
-import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/resource/color_manager.dart';
-import 'package:note_app/views/resource/icons_manager.dart';
-import 'package:note_app/views/resource/router_manager.dart';
-import 'package:note_app/views/resource/theme_manager.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/resource/color_manager.dart';
+import 'package:note_app/presentation/views/resource/icons_manager.dart';
+import 'package:note_app/presentation/views/resource/router_manager.dart';
+import 'package:note_app/presentation/views/resource/theme_manager.dart';
 
 class NoteItem extends StatelessWidget {
   NoteDataModel noteDataModel;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/edit_note.dart';
-import 'package:note_app/views/note_view.dart';
-import 'package:note_app/views/resource/string_manager.dart';
+import 'package:note_app/presentation/views/edit_note.dart';
+import 'package:note_app/presentation/views/note_view.dart';
+import 'package:note_app/presentation/views/resource/string_manager.dart';
 
 class RouterManager {
   static const String home = "/";
