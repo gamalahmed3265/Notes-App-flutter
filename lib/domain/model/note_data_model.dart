@@ -21,11 +21,28 @@ class NoteDataModel {
     return description;
   }
 
-  Color getColor() {
-    return colorBacground;
+  int getColor() {
+    return int.parse(colorBacground.toString());
   }
 
   String getDateAfterForamte() {
     return DateFormateWithYMMD(now: date).dateNote();
+  }
+
+  ////////// sets
+  setNoteName(String noteName) {
+    this.noteName = noteName;
+  }
+
+  setDescription(String description) {
+    this.description = description;
+  }
+
+  setDate(String date) {
+    this.date = DateTime.parse(date);
+  }
+
+  setColor(int colorBacground) {
+    this.colorBacground = Color(colorBacground);
   }
 }

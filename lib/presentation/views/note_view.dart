@@ -12,6 +12,7 @@ class NoteView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: const CustomViewBody(),
+      resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton(
           backgroundColor: ColorManager.primary,
           onPressed: () {
