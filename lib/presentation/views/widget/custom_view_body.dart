@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/presentation/cubits/get_notes/cubits.dart';
 import 'package:note_app/presentation/views/resource/app_size.dart';
 import 'package:note_app/presentation/views/resource/icons_manager.dart';
 import 'package:note_app/presentation/views/resource/string_manager.dart';
 import 'package:note_app/presentation/views/widget/custom_app_bar.dart';
 import 'package:note_app/presentation/views/widget/note_list_view.dart';
 
-class CustomViewBody extends StatelessWidget {
+class CustomViewBody extends StatefulWidget {
   const CustomViewBody({Key? key}) : super(key: key);
+
+  @override
+  State<CustomViewBody> createState() => _CustomViewBodyState();
+}
+
+class _CustomViewBodyState extends State<CustomViewBody> {
+  @override
+  void initState() {
+    BlocProvider.of<GetNotesCubite>(context).getNots();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

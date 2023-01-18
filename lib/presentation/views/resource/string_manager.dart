@@ -6,4 +6,5 @@ class StringManager {
   static const String add = "Add";
   static const String noRouteFound = "Not Found";
   static const String edit = "Edit";
+  static const String fieldisRequried = "Field is Requried";
 }

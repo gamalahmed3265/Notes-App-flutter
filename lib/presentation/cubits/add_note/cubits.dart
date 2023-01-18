@@ -8,7 +8,8 @@ import 'package:note_app/presentation/cubits/add_note/state.dart';
 class AddNoteCubits extends Cubit<AddNoteState> {
   AddNoteCubits() : super(AddNoteInit());
 
-  addNote(NoteDataModel noteDataModel) {
+  addNote(NoteDataModel noteDataModel) async {
+    print("AddNoteLoading---------");
     emit(AddNoteLoading());
     try {
       var noteBox = Hive.box<NoteResponse>(Constant.nameHiveBox);
@@ -16,10 +17,15 @@ class AddNoteCubits extends Cubit<AddNoteState> {
       NoteResponse noteResponse = NoteResponse(
           title: noteDataModel.getNoteName(),
           subTitle: noteDataModel.getDescription(),
-          date: noteDataModel.getDateAfterForamte(),
+          date: noteDataModel.getDate(),
           color: noteDataModel.getColor());
-      noteBox.add(noteResponse);
+
+      await noteBox.add(noteResponse);
+
+      emit(AddNoteSuccess());
+      print("AddNoteSuccess----yyyyy---");
     } catch (e) {
+      print("AddNoteFailure--------");
       emit(AddNoteFailure(e.toString()));
     }
   }
