@@ -3,19 +3,24 @@ import 'package:note_app/presentation/views/resource/app_size.dart';
 
 import '../resource/color_manager.dart';
 
-class CustomIconAppBar extends StatelessWidget {
+class CustomIcon extends StatelessWidget {
   final Icon icon;
-  const CustomIconAppBar({Key? key, required this.icon}) : super(key: key);
+  final void Function()? ontap;
+  const CustomIcon({Key? key, required this.icon, this.ontap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: AppSize.s45,
-      width: AppSize.s45,
-      decoration: BoxDecoration(
-          color: ColorManager.whitOpacity,
-          borderRadius: BorderRadius.circular(AppSize.s16)),
-      child: icon,
+    return GestureDetector(
+      onTap: ontap,
+      child: Container(
+        height: AppSize.s45,
+        width: AppSize.s45,
+        decoration: BoxDecoration(
+            color: ColorManager.whitOpacity,
+            borderRadius: BorderRadius.circular(AppSize.s16)),
+        child: icon,
+      ),
     );
   }
 }

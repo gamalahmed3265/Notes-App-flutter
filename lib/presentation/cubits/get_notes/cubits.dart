@@ -8,23 +8,24 @@ import 'package:note_app/presentation/cubits/get_notes/state.dart';
 class GetNotesCubite extends Cubit<GetNotesState> {
   GetNotesCubite() : super(GetNotesStateInit());
 
-  getNots() {
+  List<NoteDataModel> listnoteDataModel = [];
+  getNots() async {
     emit(GetNotesStateLoading());
     try {
       var noteBox = Hive.box<NoteResponse>(Constant.nameHiveBox);
       List<NoteResponse> listNoteResponse = noteBox.values.toList();
 
-      List<NoteDataModel> listNote = [];
-
       if (listNoteResponse.isEmpty) {
         emit(GetNotesEmpty());
       } else {
         for (int i = 0; i < listNoteResponse.length; i++) {
-          listNote[i].setNoteName(listNoteResponse[i].title);
-          listNote[i].setDescription(listNoteResponse[i].subTitle);
-          listNote[i].setDate(listNoteResponse[i].date);
-          listNote[i].setColor(listNoteResponse[i].color);
+          listnoteDataModel.add(NoteDataModel(
+              noteName: listNoteResponse[i].title,
+              description: listNoteResponse[i].subTitle,
+              date: listNoteResponse[i].date,
+              colorBacground: listNoteResponse[i].color));
         }
+        emit(GetNotesSuccess());
       }
     } catch (e) {
       emit(GetNotesFaliure(e.toString()));
