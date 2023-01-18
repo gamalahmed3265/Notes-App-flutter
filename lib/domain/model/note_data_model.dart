@@ -1,18 +1,14 @@
-import 'package:flutter/cupertino.dart';
-import 'package:note_app/domain/model/date_formate.dart';
-import 'package:note_app/presentation/views/resource/color_manager.dart';
-
 class NoteDataModel {
   String noteName;
   String description;
-  DateTime date;
-  Color colorBacground;
+  String date;
+  int colorBacground;
 
   NoteDataModel(
       {required this.noteName,
       required this.description,
       required this.date,
-      this.colorBacground = ColorManager.white});
+      required this.colorBacground});
   String getNoteName() {
     return noteName;
   }
@@ -21,11 +17,32 @@ class NoteDataModel {
     return description;
   }
 
-  Color getColor() {
+  int getColor() {
     return colorBacground;
   }
 
-  String getDateAfterForamte() {
-    return DateFormateWithYMMD(now: date).dateNote();
+  String getDate() {
+    return date;
+  }
+
+  ////////// sets
+  setNoteName(String noteName) {
+    this.noteName = noteName;
+  }
+
+  setDescription(String description) {
+    this.description = description;
+  }
+
+  setDate(String date) {
+    this.date = date;
+  }
+
+  setcolorBacground(int colorBacground) {
+    this.colorBacground = colorBacground;
+  }
+
+  String toStringValues() {
+    return "noteName $noteName\n description $description\n date $date\n colorBacground $colorBacground\n";
   }
 }

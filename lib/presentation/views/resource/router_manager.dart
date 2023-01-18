@@ -13,8 +13,8 @@ class RouterGeneator {
     switch (routeSettings.name) {
       case RouterManager.home:
         return MaterialPageRoute(builder: (_) => const NoteView());
-      case RouterManager.edit:
-        return MaterialPageRoute(builder: (_) => const CustomEditNote());
+      // case RouterManager.edit:
+      //   return MaterialPageRoute(builder: (_) => const CustomEditNote());
       default:
         return unDefinedRoute();
     }
