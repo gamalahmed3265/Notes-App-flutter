@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:note_app/views/resource/app_size.dart';
-import 'package:note_app/views/resource/color_manager.dart';
-import 'package:note_app/views/resource/fonts_manager.dart';
+import 'package:note_app/presentation/views/resource/app_size.dart';
+import 'package:note_app/presentation/views/resource/color_manager.dart';
+import 'package:note_app/presentation/views/resource/fonts_manager.dart';
 
 class ThemeManager {
   static TextStyle textTitle =

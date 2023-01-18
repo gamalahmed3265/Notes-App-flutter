@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:note_app/domain/model/date_formate.dart';
-import 'package:note_app/views/resource/color_manager.dart';
+import 'package:note_app/presentation/views/resource/color_manager.dart';
 
 class NoteDataModel {
   String noteName;
