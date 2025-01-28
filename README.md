@@ -18,3 +18,4 @@ samples, guidance on mobile development, and a full API reference.
 
 # Demo 
 ![27 01 2025_16 41 53_REC](https://github.com/user-attachments/assets/9a53b1b2-15a4-4b76-b91e-b388250b6989)
+![notes (2)](https://github.com/user-attachments/assets/49035861-8a97-4f5f-9c40-8d1a70e6ee14)
